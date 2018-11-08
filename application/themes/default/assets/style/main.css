@@ -1,0 +1,1785 @@
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(255,255,255,0.75);
+  /* opacity: 1; /* Firefox */ */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgba(255,255,255,0.75);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgba(255,255,255,0.75);
+}
+
+a{
+  text-decoration: none;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s
+}
+
+body:hover{
+  cursor: default;
+}
+
+html, body{
+  height: 100%;
+}
+
+body{
+  /* background: url('../highlight.png') #14073a; */
+  background-color: #14073a;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+button.action{
+  background: rgb(90,80,210);
+  margin-top: 25px;
+  display: inline-block;
+}
+
+button.action span{
+  background: linear-gradient(to bottom right, rgba(255,255,255,0.1), rgba(255,255,255,0.08));
+  font-size: 16px;
+  padding: 2px;
+  display: inline-block;
+}
+
+button.action:hover span i{
+  background: rgb(90,80,210);
+}
+
+button.action span i{
+  font-style: normal;
+  background: rgb(90,80,210);
+  color: white;
+  padding: 8px 22px 8px 22px;
+  display: inline-block;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+}
+
+.action-button {
+  border: 1px solid rgba(255,255,255,0.2);
+  background: #5e52d1;
+  color: white;
+  padding: 10px 25px 10px 25px;
+}
+
+.action-button:hover {
+  background: #6d60e4;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.content{
+  flex: 1 0 auto;
+  min-width: 1340px;
+}
+
+div.slider{
+  background: url('http://waraqh.com/wp-content/uploads/2018/04/photos-for-collection-aurora-borealis-wallpaper-simple-green-motive-ideas-hd-pics-pc-personalized-sample-blue.jpg') no-repeat center top;
+  background-size: cover;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+}
+
+div.slider .slider-justify{
+  width: 1280px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div.slider .slider-justify h1{
+  font-family: 'Open Sans';
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 54px;
+  line-height: 58px;
+  letter-spacing: 0.5px;
+  color: white;
+  width: 580px;
+}
+
+div.slider .slider-justify span.detail {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: rgba(255,255,255,0.4);
+}
+
+div.slider .slider-justify a {
+  font-size: 18px;
+  background: rgb(90,80,210);
+  color: white;
+  border: 2px solid rgba(255,255,255,0.12);
+  font-weight: 300;
+  padding: 10px 25px 10px 25px;
+  margin-top: 30px;
+  align-self: flex-start;
+}
+
+div.slider .slider-justify a:hover {
+  background: #6e65d7;
+  border: 2px solid rgba(255,255,255,0.05);
+}
+
+div.slider-ribbon {
+  border-bottom: 1px solid rgba(0,0,0,0.8);
+}
+
+div.slider-ribbon.light {
+  border-bottom: 1px solid rgba(130,120,230,0.25);
+}
+
+footer{
+  flex-shrink: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: rgb(82,71,156);
+  text-align: center;
+}
+
+footer nav a{
+  color: rgba(255,255,255,0.4);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+footer nav a:hover{
+  color: rgba(255,255,255,0.8);
+}
+
+div.h.main{
+  background: rgba(130,120,230,0.2);
+  border-bottom: 1px solid rgba(130,120,230,0.25);
+}
+
+div.h.sub{
+  background: rgba(130,120,230,0.15);
+  border-bottom: 1px solid rgba(130,120,230,0.15);
+}
+
+.w100{
+  width: 1340px;
+  margin: auto;
+}
+
+header {
+  min-width: 1340px;
+  border-bottom: 1px solid rgba(0,0,0,0.8);
+}
+
+div.header {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+header ul.account {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 16px;
+}
+
+header ul.account li {
+  float: left;
+  margin-left: 30px;
+}
+
+header ul.account li a {
+  color: white;
+}
+
+header ul.account li a i {
+  font-size: 14px;
+  vertical-align: top;
+  margin-right: 12px;
+  color: #6e63b7;
+}
+
+header ul.account li a i.fa-envelope{
+  margin-top: 3px;
+}
+
+header ul.account li a i.fa-user{
+  margin-top: 2px;
+}
+
+header ul.account li a:hover i{
+  color: white;
+}
+
+header a.logo{
+  width: 108px;
+  height: 31px;
+  background: url('../logo.png') no-repeat left top;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.grid{
+  display: flex;
+}
+
+.grid.row{
+  flex-direction: row;
+}
+
+h1 {
+  font-weight: 200;
+  font-size: 30px;
+  font-family: "Open Sans";
+}
+
+h2 {
+  font-weight: 200;
+  font-size: 24px;
+  font-family: "Open Sans";
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 16px;
+  color: rgba(255,255,255,0.8);
+  font-family: "Open Sans";
+}
+
+.grid h1{
+  width: 100%;
+}
+
+header nav a{
+  color: white;
+  font-size: 18px;
+  margin-right: 30px;
+  font-weight: 300;
+}
+
+header nav a:hover, header nav a.active{
+  color: white;
+}
+
+header nav{
+  margin-left: 35px;
+  margin-top: 15px;
+  flex: 1 0 auto;
+}
+
+header a.game-title{
+  color: rgb(255,255,255);
+  font-size: 14px;
+  float: left;
+  padding: 10px;
+  padding-left: 0;
+  font-weight: bold;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+header a.game-title i{
+  font-size: 12px;
+  vertical-align: top;
+  margin-top: 2px;
+  margin-right: 10px;
+  color: #6e63b7;
+}
+
+header a.game-title:hover i{
+  color: white;
+}
+
+header i.bc.arrow{
+  float: left;
+  color: rgb(82,71,156);
+  font-size: 24px;
+  margin-top: 7px;
+}
+
+header a.bc.item{
+  float: left;
+  color: rgba(255,255,255,0.8);
+  font-size: 14px;
+  padding: 11px 14px 9px 14px;
+  font-weight: 300;
+}
+
+header a.bc.item:hover{
+  color: white;
+}
+
+header a.bc.item.last{
+  color: rgb(255,255,255);
+}
+
+header i.bc.line{
+  float: left;
+  background: rgb(82,71,156);
+  width: 1px;
+  height: 27px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  margin: 5px 6px 5px 6px;
+}
+
+div.breadcrumbs{
+  font-size: 14px;
+}
+
+div.breadcrumbs a{
+  color: #a79fd8;
+  padding: 10px;
+  display: inline-block;
+  padding-top: 12px;
+}
+
+div.breadcrumbs i{
+  color: #52479c;
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+div.breadcrumbs a i{
+  font-size: 14px;
+}
+
+div.clear{
+  clear: both;
+  display: block;
+}
+/*
+div.gallery{
+  background: #302a64;
+  border-top: 1px solid #52479c;
+  border-top: 3px solid rgba(130,120,230,0.3);
+  padding-bottom: 20px;
+}
+
+div.gallery a{
+  display: block;
+  width: 200px;
+  height: 320px;
+  background: url('../gamecard.png');
+  margin-right: 10px;
+  margin-left: 10px;
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.15);
+  90,80,210
+}
+
+div.gallery a span.ribbon{
+  background: #463f83;
+  background: rgba(0,0,0,0.5);
+  border-top: 1px solid rgba(255,255,255,0.15);
+  position: absolute;
+  bottom: 0;
+  left:0;
+  right: 0;
+  padding: 6px 10px 6px 10px;
+  margin: -1px;
+}
+
+div.gallery a span.ribbon span{
+  display: block;
+}
+
+div.gallery a span.ribbon span.name{
+  color: white;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+  letter-spacing: 0.25px;
+}
+
+div.gallery a span.ribbon span.status.online{
+  color: #5ff81c;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+div.gallery a:first-of-type{
+  margin-left: 0;
+}
+
+div.gallery div.grid{
+  flex-wrap: wrap;
+} */
+
+/* div.news{
+  width: 1340px;
+  flex: 1;
+  display: flex;
+  margin: auto;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+div.news h1{
+  padding-bottom: 25px;
+  margin: 0;
+  flex: none;
+  font-weight: 300;
+  font-size: 30px;
+}
+
+div.news div.blog{
+  flex: 1;
+} */
+
+/* div.news div.blog div.posts{
+  display: flex;
+  flex-direction: column;
+  flex-flow: row wrap;
+  width: auto;
+  flex: 1;
+  margin-right: 50px;
+  justify-content: space-between;
+}
+
+div.news div.blog h1{
+  margin: 0;
+  height: auto;
+}
+
+div.news div.hot{
+  width: 500px;
+  backround: red;
+}
+
+div.news div.hot a{
+  display: block;
+  color: white;
+  border-top: 1px solid rgba(82, 71, 156, 0.5);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+div.news div.hot a:first-of-type{
+  border: 0;
+  padding-top: 0;
+}
+
+div.news div.hot a span.stamp{
+  display: block;
+  font-weight: 300;
+  font-size: 16px;
+  color: rgba(255,255,255,0.4);
+  padding-top: 8px;
+}
+
+div.news div.hot a span.stamp span.date{
+  font-weight: 300;
+}
+
+div.news div.hot a span.stamp span.cat{
+  font-weight: 400;
+  margin-right: 20px;
+}
+
+div.news div.hot a span.title{
+  display: block;
+  font-size: 26px;
+  font-weight: 300;
+}
+
+div.news div.blog a{
+  color: white;
+  width: 250px;
+  background: #1b173e;
+  background: rgba(255,255,255,0.03);
+  background: rgba(130,120,230,0.15);
+  border: 1px solid rgba(130,120,230,0.25);
+  border-top: 0;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+}
+
+div.news div.blog a:hover {
+  background: rgba(130,120,230,0.25);
+  border: 1px solid rgba(130,120,230,0.5);
+}
+
+div.news div.blog a span.read{
+  display: block;
+  margin-top: 20px;
+  color: rgba(255,255,255,0.4);
+}
+
+div.news div.blog a span.col a.read{
+  width: auto;
+  display: block;
+}
+
+div.news div.blog a:hover span.read{
+  color: white;
+} */
+
+/* div.news div.blog a.featured span.stamp{
+  display: block;
+  padding-top: 15px;
+  font-weight: 300;
+  padding-left: 0;
+  color: rgba(255,255,255,0.4);
+}
+
+div.news div.blog a.featured span.stamp span.cat{
+  padding-right: 20px;
+  font-weight: 400;
+} */
+/*
+div.news div.blog a.featured span.image{
+  flex: 1;
+  background: url('https://hdwallsource.com/img/2014/9/abstract-wallpaper-4377-4430-hd-wallpapers.jpg') center;
+  background-size: 100%;
+  height: 240px;
+}
+
+div.news div.blog a span.title{
+  font-size: 20px;
+  font-weight: 300;
+  display: block;
+  padding: 15px 15px 0 15px;
+}
+
+div.news div.blog a span.intro{
+  font-weight: 300;
+  padding-top: 15px;
+  display: block;
+  padding: 10px 15px 0 15px;
+  color: rgba(255,255,255,0.9);
+  font-size: 16px;
+}
+
+div.news div.blog a span.stamp{
+  display: block;
+  padding-top: 15px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.4);
+  font-size: 12px;
+  padding: 15px 15px 0 15px;
+}
+
+div.news div.blog a span.stamp span.cat{
+  padding-right: 20px;
+  font-weight: 400;
+}
+
+div.news div.blog a span.image{
+  background: url('https://hdwallsource.com/img/2014/9/abstract-wallpaper-4377-4430-hd-wallpapers.jpg') center;
+  background-size: 100%;
+  height: 140px;
+  width: 100%;
+  display: block;
+}
+
+
+div.news div.blog a.featured{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  background: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+div.news div.blog a.featured span.title{
+  font-size: 26px;
+  display: block;
+  padding-top: 10px;
+  padding-left: 0;
+  font-weight: 300;
+  line-height: 32px;
+}
+
+div.news div.blog a span.col{
+  width: 340px;
+  padding-left: 15px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-left: 0;
+  display: block;
+}
+
+div.news div.blog a.featured span.intro{
+  font-weight: 300;
+  padding-top: 15px;
+  display: block;
+  padding-left: 0;
+  font-size: 18px;
+}
+
+div.news div.blog a.featured span.stamp{
+  padding: 15px 0 0 0;
+  font-size: 14px;
+} */
+
+.cell {
+  flex: auto;
+}
+
+.w1340 {
+  width: 1340px;
+  margin: auto;
+}
+
+.w1200 {
+  width: 1200px;
+  margin: auto;
+}
+
+.w1100 {
+  width: 1100px;
+  margin: auto;
+}
+
+.w900 {
+  width: 900px;
+  margin: auto;
+}
+
+h1.support-title {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  font-size: 42px;
+}
+
+div.support-fields {
+  margin-bottom: 80px;
+}
+
+input {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.5);
+  outline: 0;
+  color: white;
+  padding: 10px 15px 10px 15px;
+}
+
+input.support-input {
+  width: 602px;
+  font-size: 18px;
+  padding: 14px 54px 14px 30px;
+}
+
+div.support-find {
+  width: 688px;
+  text-align: center;
+  position: relative;
+  margin: auto;
+}
+
+div.support-find button {
+  margin-left: 20px;
+}
+
+div.support-find i {
+  position: absolute;
+  right: 20px;
+  top: 13px;
+  font-size: 24px;
+  color: rgba(255,255,255,0.8);
+}
+
+div.support-fields {
+  margin-top: 80px;
+}
+
+div.product-selector {
+  /* justify-content: space-evenly; */
+  flex-wrap: wrap;
+  width: 480px;
+  flex: 1;
+  align-self: flex-start;
+  padding-bottom: 25px;
+}
+
+div.product-selector a {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  width: 160px;
+  margin: 10px;
+  text-align: center;
+  position: relative;
+  height: 160px;
+}
+
+div.product-selector a:hover {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+div.product-selector a h3 {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+div.product-selector a img {
+  position: absolute;
+  left: 2%;
+  top: 2%;
+  right: 2%;
+  bottom: 2%;
+  width: 96%;
+  height: 96%;
+}
+
+div.product-selector h2 {
+  width: 100%;
+  flex: 1 1 100%;
+}
+
+/*
+div.recent-activity {
+  align-items: flex-start;
+  flex-direction: column;
+  border-left: 1px solid #52479c;
+  background: rgba(255,255,255,0.15);
+  border: 2px solid rgba(255,255,255,0.15);
+}
+
+div.recent-activity h3 {
+  margin-left: 20px;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 200;
+  color: white;
+  background: rgba(255,255,255,0.15);
+  padding: 15px;
+  flex-grow: 2;
+}
+
+div.recent-activity a:first-of-type {
+  border-top: 1px solid rgba(255,255,255, 0.1);
+}
+
+div.recent-activity a {
+  width: 520px;
+  border-bottom: 1px solid rgba(255,255,255, 0.1);
+}
+
+div.recent-activity a:last-of-type {
+  border-bottom: 0;
+}
+
+div.recent-activity a span {
+  width: 48px;
+  margin: 5px 25px 5px 20px;
+  align-self: center;
+}
+
+div.recent-activity a span img {
+  width: 100%;
+}
+
+div.recent-activity a h2 {
+  align-self: center;
+  margin: 20px 20px 20px 0;
+  font-size: 18px;
+  color: white;
+  flex: 1;
+}
+
+div.recent-activity a date {
+  align-self: center;
+  align-content: flex-end;
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+  margin-right: 20px;
+}
+
+div.recent-activity a:hover {
+  background: rgba(255,255,255,0.04);
+}
+
+div.recent-activity a:hover h2 {
+  color: white;
+}
+*/
+
+div.support-special {
+  flex-direction: column;
+  /* border-top: 1px solid #5147cc; */
+  /* background: #5147cc; */
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin-bottom: 80px;
+  background: url('../test-bg.png') center left;
+  background-size: cover;
+}
+
+div.support-special a {
+  margin: auto;
+  color: white;
+  border: 2px solid rgba(255,255,255,0.15);
+  padding: 13px 60px 13px 60px;
+  font-size: 24px;
+  font-weight: 300;
+  background: #ff3228;
+  margin-right: 120px;
+}
+
+div.support-special a i {
+  padding: 15px 45px 15px 45px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+div.support-special a:hover {
+  background: #ff4f46;
+  border: 2px solid rgba(255,255,255,0.2);
+}
+
+div.support-special div.info u {
+  text-decoration: none;
+  border-bottom: 3px solid #ff5a52;
+  padding-bottom: 5px;
+}
+
+div.support-special div.info h1 {
+  font-size: 38px;
+  font-weight: 300;
+  letter-spacing: -1.5px;
+  margin: 0;
+  padding: 0;
+  width: 600px;
+}
+
+div.support-special div.info {
+  margin-left: 100px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+div.support-special div.info p {
+  margin: 0;
+  margin-top: 20px;
+  font-size: 20px;
+  width: 600px;
+}
+
+ul.support-filter {
+  list-style: none;
+  flex-direction: row;
+  align-content: space-around;
+  margin: 50px auto 120px auto;
+  padding: 0;
+}
+
+ul.support-filter li a {
+  text-align: center;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.1);
+  width: 200px;
+  height: 140px;
+  margin: auto;
+  align-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+ul.support-filter li i {
+  font-size: 60px;
+  color: white;
+  margin-top: 15px;
+}
+
+ul.support-filter li h2 {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.75);
+  margin: auto 15px auto 15px;
+  text-transform: uppercase;
+}
+
+ul.support-filter li a:hover {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+ul.support-filter li a:hover h2 {
+  color: white;
+}
+
+div.support-latest {
+  margin-bottom: 80px;
+  align-content: space-between;
+  flex-direction: row;
+  margin-top: 80px;
+}
+
+div.support-field {
+  flex: auto;
+  width: 500px;
+}
+
+div.support-field div.container {
+  background: rgba(255,255,255,0.15);
+  border: 2px solid rgba(255,255,255,0.15);
+  margin: auto;
+  width: inherit;
+}
+
+div.support-field h2 {
+  margin: 0;
+  padding: 15px 25px 15px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  font-size: 20px;
+  background: rgba(255,255,255,0.15);
+}
+
+div.support-field h2 i {
+  margin-right: 15px;
+}
+
+div.support-field ul {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+div.support-field ul li a {
+  color: white;
+  align-content: middle;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  position: relative;
+}
+
+div.support-field ul li a i {
+  position: absolute;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  color: rgba(255,255,255,0.5);
+}
+
+div.support-field ul li a:hover i {
+  color: white;
+}
+
+div.support-field ul li a:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+div.support-field ul li:last-of-type a {
+  border-bottom: 0;
+}
+
+div.support-field ul li a span.date {
+  align-self: center;
+  font-size: 14px;
+  padding: 0 0 0 25px;
+  color: rgba(255,255,255,0.8);
+  width: 60px;
+}
+
+div.support-field ul li a span.title {
+  flex: 1;
+  padding: 15px 48px 15px 25px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+div.support-field ul li a span.description {
+  width: 100%;
+  padding: 0 48px 15px 25px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.75);
+}
+
+div.recent-activity {
+  flex: none;
+}
+
+h2.support-title {
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+h2.support-title span {
+  border-bottom: 2px solid white;
+  padding-bottom: 10px;
+  width: 400px;
+  display: block;
+  padding-left: 40px;
+}
+
+article.support {
+  flex: 1;
+}
+
+article.support h1 {
+  margin-top: 60px;
+}
+
+div.support-article div.column {
+  flex: 0 0 400px;
+  margin-left: 50px;
+  margin-top: 60px;
+}
+
+div.support-field.related {
+  width: 400px;
+}
+
+div.support-field.related div.container {
+  background: rgba(255,255,255,0.1);
+}
+
+div.support-field.related h2 {
+  font-size: 18px;
+  padding: 10px 15px 10px 15px;
+}
+
+div.support-field.related span.title {
+  padding: 15px 15px 0 15px;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+div.support-field.related span.description {
+  padding: 10px 15px 15px 15px;
+}
+
+article.support div.instruction {
+  line-height: 160%;
+  margin-top: 30px;
+  font-weight: 300;
+  border: 1px dashed rgba(255,255,255,0.1);
+  padding: 0 25px 0 25px;
+  font-family: "Open Sans";
+}
+
+article.support div.grid.details {
+  color: rgba(255,255,255,0.8);
+  align-content: space-between;
+}
+
+article.support span.updated, article.support span.date {
+  flex: 1;
+}
+
+article.support span.relevant a {
+  color: white;
+  border-bottom: 2px solid rgb(90,80,210);
+  padding-bottom: 4px;
+  margin: 4px;
+}
+
+article.support a.feedback {
+  padding: 5px;
+  margin-right: 25px;
+}
+
+article.support a.feedback i {
+  margin-right: 15px;
+}
+
+article.support a.helpful {
+  color: #4ee236;
+}
+
+article.support a.needs-improvement {
+  color: #ff3228;
+}
+
+article.support a.feedback:hover {
+  color: white;
+}
+
+article.support span.feedback {
+  margin-top: 20px;
+  display: block;
+}
+
+div.gallery-bg {
+  background: rgba(130,120,230,0.05);
+}
+
+div.gallery {
+  align-content: space-between;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+div.gallery h1 {
+  width: 320px;
+  margin-right: 50px;
+  margin-top: 20px;
+  align-self: center;
+}
+
+div.gallery h1 span {
+  display: block;
+}
+
+div.gallery h1 span.title {
+  font-size: 42px;
+  text-align: right;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(130,120,230,1);
+}
+
+div.gallery h1 span.paragraph {
+  font-size: 18px;
+  color: rgba(255,255,255,0.75);
+  margin-top: 20px;
+  letter-spacing: 0.5px;
+  text-align: right;
+}
+
+div.gallery a {
+  display: block;
+  flex: 0 0 200px;
+  height: 370px;
+  background: rgba(130,120,230,0.3);
+  margin: 8px;
+  border: 1px solid rgba(0,0,0,0.8);
+  position: relative;
+}
+
+div.gallery a span.clip {
+  position: absolute;
+  width: 198px;
+  height: 358px;
+  display: block;
+  left: 0px;
+  top: 0;
+  border: 1px solid rgba(130,120,230,0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+div.gallery a span.cover {
+  position: absolute;
+  width: 198px;
+  height: 358px;
+  display: block;
+  left: 0px;
+  top: 0;
+
+  opacity: 0.9;
+
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s
+}
+
+div.gallery a span.cover.infinitesky {
+  background: url('../gamecard.png') no-repeat center;
+  background-size: cover;
+}
+
+div.gallery a:hover span.cover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  opacity: 1;
+}
+
+div.gallery a span.ribbon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  color: rgba(255,255,255,0.8);
+  text-align: center;
+  background: #231c56;
+  padding: 16px 15px 16px 15px;
+  border: 1px solid rgba(130,120,230,0.35);
+  border-bottom: 1px solid rgba(130,120,230,0.25);
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s
+}
+
+div.gallery a:hover span.ribbon {
+  background: #31296d;
+}
+
+div.gallery a span.ribbon span {
+  display: block;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+div.gallery a span.ribbon span.status {
+  font-size: 14px;
+  display: none;
+}
+
+div.gallery a:hover span.ribbon {
+  color: white;
+}
+
+h2.title-center {
+  text-align: center;
+  padding-top: 30px;
+  font-weight: 300;
+  font-size: 28px;
+}
+
+h2.title-center a {
+  font-size: 14px;
+  vertical-align: middle;
+  margin-left: 10px;
+  color: rgba(130,120,230,0.8);
+}
+
+div.index-featured {
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+
+div.index-featured div.news {
+  flex: 0 0 780px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+div.index-featured div.news h1 {
+  width: 100%;
+}
+
+div.index-featured div.news a {
+  border: 1px solid black;
+  background: rgba(130,120,230,0.05);
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  width: 240px;
+  margin-top: 30px;
+  flex-direction: column;
+}
+
+div.index-featured div.news a:hover {
+  background: rgba(130,120,230,0.1);
+}
+
+div.index-featured div.news a.pin {
+  width: 100%;
+  margin-top: 0;
+  min-height: 280px;
+  flex-direction: row;
+}
+
+div.index-featured div.news span.border {
+  border: 1px solid rgba(130,120,230,0.2);
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 auto;
+}
+
+div.index-featured div.news a.pin span.border {
+  flex: 0 0 320px;
+}
+
+div.index-featured div.news span.clip {
+  position: relative;
+  border: 1px solid rgba(130,120,230,0.25);
+  border-bottom: 1px solid black;
+  overflow: hidden;
+  flex: 1 1 148px;
+}
+
+div.index-featured div.news a.pin span.clip {
+  border: 1px solid rgba(130,120,230,0.25);
+  border-right: 1px solid black;
+  height: auto;
+}
+
+div.index-featured div.news span.cover {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s
+}
+
+div.index-featured div.news span.detail {
+  margin: 20px 20px 0 20px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.25);
+  font-size: 15px;
+}
+
+div.index-featured div.news h3 {
+  margin: 20px;
+  font-size: 25px;
+  line-height: 26px;
+  font-weight: 300;
+  color: white;
+}
+
+div.index-featured div.news a.pin h3 {
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  line-height: 30px;
+}
+
+div.index-featured div.news a.pin h3 {
+  font-size: 32px;
+}
+
+div.index-featured div.news span.date {
+  margin-left: 15px;
+}
+
+div.index-featured div.news a:hover span.cover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  opacity: 1;
+}
+
+div.index-featured div.events {
+  flex: 0 0 500px;
+  margin-top: 15px;
+}
+
+div.index-featured div.events a {
+  background: rgba(130,120,230,0.05);
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(130,120,230,0.2);
+  border-bottom: 0;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s
+}
+
+div.index-featured div.events a:first-of-type {
+  border-top-width: 1px;
+}
+
+div.index-featured div.events a:last-of-type {
+  border-bottom: 1px solid rgba(130,120,230,0.2);
+}
+
+div.index-featured div.events a:hover {
+  background: rgba(130,120,230,0.1);
+}
+
+div.index-featured div.events a h3 {
+  flex: 1;
+  margin-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+div.index-featured div.events a h3 span {
+  display: block;
+}
+
+div.index-featured div.events a span.title {
+  font-size: 24px;
+  color: white;
+}
+
+div.index-featured div.events a span.details {
+  margin-top: 10px;
+  font-size: 15px;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 0.25px;
+}
+
+div.index-featured div.events a date {
+  width: auto;
+  padding: 20px 0 20px 0;
+  font-size: 22px;
+  font-weight: 300;
+  margin: 0 35px 0 25px;
+  color: #867bdd;
+  text-align: center;
+}
+
+div.index-featured div.events a date span {
+  display: block;
+  text-align: center;
+  line-height: 12px;
+}
+
+div.index-featured div.events a date i {
+  align-self: center;
+  color: rgba(255,255,255,0.8);
+}
+
+div.index-featured div.events div.border {
+  border: 1px solid rgba(0,0,0,0.8);
+}
+
+div.index-featured span.line {
+  display: block;
+  width: 160px;
+  border-bottom: 1px solid rgba(130,120,230,1);
+  margin-bottom: 30px;
+}
+
+div.index-featured div.events a span.related {
+  color: rgba(255,255,255,0.25);
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+div.news.latest {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+div.news.latest a {
+  min-height: 50px;
+  margin-top: 30px;
+  flex: 0 0 350px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  background: rgba(130,120,230,0.05);
+}
+
+div.news.latest a:hover {
+  background: rgba(130,120,230,0.1);
+}
+
+div.news.latest a.frequent {
+  flex: 0 1 520px;
+}
+
+div.news.latest a span.clip {
+  flex: 1 1 140px;
+  max-height: 160px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(130,120,230,0.25);
+  border-bottom: 1px solid black;
+}
+
+div.news.latest a span.clip.unset {
+  border: 0;
+  background: rgb(90,80,210);
+  height: 5px;
+  flex: 0 1 5px;
+}
+
+div.news.latest a.pinned {
+  flex: 1 0 auto;
+  flex-direction: row;
+  background: rgba(130,120,230,0.1);
+}
+
+div.news.latest a.pinned:hover {
+  background: rgba(130,120,230,0.15);
+}
+
+div.news.latest a.suplementary {
+  flex: 0 0 250px;
+}
+
+div.news.latest a.suplementary span.clip {
+  flex: 1 1 180px;
+  max-height: 180px;
+}
+
+div.news.latest a.pinned span.clip {
+  flex: 1 1 100%;
+  height: auto;
+  max-height: none;
+  border: 1px solid rgba(130,120,230,0.2);
+  border-right: 1px solid black;
+}
+
+div.news.latest a.frequent span.clip {
+  flex: 1 1 240px;
+  max-height: 240px;
+}
+
+div.news.latest h1, div.news.all h1 {
+  flex: 1 1 100%;
+  margin: 60px 0 0 0;
+}
+
+div.news.all h1 {
+  margin-top: 0;
+}
+
+div.news.all span.line {
+  margin-top: 50px;
+}
+
+div.news.latest a span.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
+
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s
+}
+
+div.news.latest a:hover span.cover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  opacity: 1;
+}
+
+div.news.latest a h2 {
+  color: white;
+  font-size: 24px;
+  margin: 0 0 10px 0;
+  font-weight: 300;
+}
+
+div.news.latest a span.details {
+  font-size: 14px;
+  color: rgba(255,255,255,0.25);
+  margin: 10px 0 10px 0;
+  justify-content: space-between;
+}
+
+div.news.latest a span.text {
+  margin: 0 0 10px 0;
+  color: rgba(255,255,255,0.5);
+  font-size: 16px;
+}
+
+div.news.latest a span.border {
+  border: 1px solid rgba(130,120,230,0.2);
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+}
+
+div.news.latest h1.middle.title {
+  font-size: 42px;
+  text-align: center;
+  margin: 60px 0 30px 0;
+}
+
+div.news.latest a.pinned span.border {
+  flex: 0 1 380px;
+  min-width: 380px;
+  min-height: 386px;
+  border: 1px solid rgba(130,120,230,0.2);
+}
+
+div.news.latest a.pinned h2 {
+  font-size: 40px;
+  line-height: 46px;
+  font-weight: 300;
+  margin: 0 0 15px 0;
+}
+
+div.news.latest a.frequent h2 {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+div.news.latest a.pinned span.text {
+  margin: 0 0 15px 0;
+}
+
+div.news.latest a.pinned span.details {
+  margin: 15px 0 15px 0;
+  font-size: 16px;
+}
+
+div.news.latest span.line, div.news.all span.line {
+  flex: 1 0 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+div.news.latest span.bar, div.news.all span.bar {
+  width: 160px;
+  border-bottom: 1px solid rgba(130,120,230,1);
+  display: block;
+}
+
+div.news.latest span.action {
+  color: rgba(255,255,255,0.5);
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  margin-top: 25px;
+}
+
+div.news.latest span.action i {
+  margin-left: 10px;
+  transition: margin 0.25s;
+  -webkit-transition: margin 0.25s;
+}
+
+div.news.latest a:hover span.action {
+  color: white;
+}
+
+div.news.latest a:hover span.action i {
+  margin-left: 15px;
+}
+
+div.news.highlight {
+  flex: 1 1 100%;
+  display: inherit;
+  flex-flow: inherit;
+  justify-content: inherit;
+  background: rgba(130,120,230,0.05);
+  padding-bottom: 30px;
+  margin-top: 30px;
+}
+
+div.news.latest h1.no-margin {
+  margin: 0;
+}
+
+div.news.highlight span.line.dark {
+  border-bottom: 1px solid rgba(0,0,0,0.8);
+  display: block;
+}
+
+div.news.highlight span.line.light {
+  border-bottom: 1px solid rgba(130,120,230,0.25);
+  display: block;
+  margin-bottom: 30px;
+}
+
+div.news.all {
+  margin-bottom: 50px;
+}
+
+div.news.all a {
+  display: flex;
+  border-top: 1px solid rgba(130,120,230,0.2);
+  padding: 15px 0 15px 0;
+}
+
+div.news.all a:hover {
+  background: rgba(130,120,230,0.1);
+  border: 1px solid rgba(130,120,230,0.2);
+  border-bottom: 0;
+}
+
+div.news.all a:last-of-type {
+  border-bottom: 1px solid transparent;
+}
+
+div.news.all a:last-of-type:hover {
+  background: rgba(130,120,230,0.1);
+  border: 1px solid rgba(130,120,230,0.2);
+}
+
+div.news.all a:first-of-type {
+  margin-top: 30px;
+}
+
+div.news.all a:first-of-type:hover {
+  border-top-color: rgba(130,120,230,0.2);
+}
+
+div.news.all a span.border {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s
+}
+
+div.news.all a:hover span.border {
+  transform: translateX(15px);
+  -webkit-transform: translateX(15px);
+}
+
+div.news.all a h2 {
+  margin: 0;
+  margin-top: 10px;
+  color: white;
+  font-size: 26px;
+  margin-right: 100px;
+  font-weight: 300;
+}
+
+div.news.all a span.details {
+  color: rgba(255,255,255,0.25);
+}
+
+div.news.all a span.clip {
+  width: 240px;
+  height: 120px;
+  flex: 0 0 240px;
+  border: 1px solid rgba(0,0,0,0.2);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s
+}
+
+div.news.all a:hover span.clip {
+  margin-right: 15px;
+  border: 1px solid rgba(0,0,0,0.8);
+}
+
+div.news.all a span.cover {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s
+}
+
+a.news.load {
+  border: 1px solid red;
+  display: flex;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  background: #231c56;
+  border: 2px solid transparent;
+  color: white;
+  justify-content: center;
+  width: 440px;
+  margin: auto;
+  font-family: "Open Sans";
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+
+a.news.load span {
+  padding: 12px;
+}
+
+a.news.load:hover {
+  border: 2px solid rgba(255,255,255,0.2);
+}

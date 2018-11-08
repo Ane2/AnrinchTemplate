@@ -1,0 +1,22 @@
+pages:
+  theme: default
+
+locale:
+  enabled: false
+  default: en-us
+
+cookie:
+  enabled: false
+
+title: null
+description: null
+
+debugger:
+  enabled: false
+
+
+sitemap:
+  version: 1.0
+  encoding: utf-8
+  schema: http://www.sitemaps.org/schemas/sitemap/0.9
+  # http://www.w3.org/1999/xhtml

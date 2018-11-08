@@ -1,0 +1,23 @@
+multisite:
+  enabled: true
+
+title: 'Anrinch Entertainment'
+
+transporter:
+  default:
+    host: 'smtp.gmail.com'
+    port: 587
+    secure: false # true for 465, false for other ports
+    auth:
+      user: 'p.d.walczak@gmail.com' # generated ethereal user
+      pass: 'xderosmorynsxjbj' # generated ethereal password
+
+locale:
+  enabled: true
+  default: en-gb
+
+pages:
+  theme: light
+
+sass:
+  outputStyle: 'compressed'

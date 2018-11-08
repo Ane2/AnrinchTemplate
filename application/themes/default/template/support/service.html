@@ -1,0 +1,150 @@
+{{> partials/header}}
+
+<body>
+  {{> partials/navigation}}
+
+  <script>
+    window.onload = () => {
+      let search = document.getElementById('trouble-search')
+
+      search.onkeypress = (event) => {
+        if (event.keyCode === 13) return event.preventDefault()
+      }
+
+      let delay = null
+      let query = () => {
+        let input = search.value
+
+        console.log(input)
+      }
+
+      search.onkeyup = () => {
+        clearTimeout(delay)
+        delay = setTimeout(query, 100)
+      }
+    }
+  </script>
+
+  <div class="content">
+    <div class="bg">
+      <h1 class="w1340 cell support-title">InfiniteSky Support</h1>
+
+      <div class="support-find cell">
+        <form action="/support" method="POST">
+          <input type="text" placeholder="What trouble You?" class="support-input" id="trouble-search" name="query">
+        </form>
+        <i class="far fa-search"></i>
+      </div>
+    </div>
+
+    <!-- <h2 class="w1340 cell support-title">
+      <span>Narrow your findings</span>
+    </h2> -->
+
+    <ul class="w1340 grid support-filter">
+      <li class="cell">
+        <a href="{{ url.self }}/technical" class="grid">
+          <i class="far fa-user cell"></i>
+          <h2 class="cell">Account</h2>
+        </a>
+      </li>
+
+      <li class="cell">
+        <a href="" class="grid">
+          <i class="fas fa-credit-card"></i>
+          <h2>Payments</h2>
+        </a>
+      </li>
+
+      <li class="cell">
+        <a href="" class="grid">
+          <i class="far fa-wrench"></i>
+          <h2>Technical</h2>
+        </a>
+      </li>
+
+      <li class="cell">
+        <a href="" class="grid">
+          <i class="far fa-gamepad"></i>
+          <h2>Gameplay</h2>
+        </a>
+      </li>
+    </ul>
+
+    <div class="w1340 grid support-latest">
+      <div class="support-field forum">
+        <div class="container">
+          <h2><i class="fas fa-comment"></i>Forum threads</h2>
+
+          <ul>
+            <li>
+              <a href="" class="grid">
+                <span class="date">5m ago</span>
+                <span class="title">Cannot log back into launcher!</span>
+                <i class="fal fa-angle-right"></i>
+              </a>
+            </li>
+
+            <li>
+              <a href="" class="grid">
+                <span class="date">14m ago</span>
+                <span class="title">Cannot log back into launcher! Cannot log back into launcher! Cannot log back into launcher! Cannot log back into launcher!</span>
+                <i class="fal fa-angle-right"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="support-field activity">
+        <div class="container">
+          <h2><i class="fas fa-user"></i>My Recent Activity</h2>
+
+          <ul>
+            <li>
+              <a href="" class="grid">
+                <span class="title">Cannot log back into launcher!</span>
+                <span class="description">Created 15m ago</span>
+                <i class="fal fa-angle-right"></i>
+              </a>
+            </li>
+
+            <li>
+              <a href="" class="grid">
+                <span class="title">Cannot log back into launcher! Cannot log back into launcher! Cannot log back into launcher!</span>
+                <span class="description">Created 15m ago</span>
+                <i class="fal fa-angle-right"></i>
+              </a>
+            </li>
+
+            <li>
+              <a href="" class="grid">
+                <span class="title">Cannot log back into launcher!</span>
+                <span class="description">Created 15m ago</span>
+                <i class="fal fa-angle-right"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="grid support-special">
+      <div class="w1200 grid">
+        <div class="info cell">
+          <h1>Could not find what you was looking for?</h1>
+
+          <p>Ask us <u>anything</u> with our Support Ticket!</p>
+        </div>
+
+        <a href="#">Create a ticket</a>
+      </div>
+    </div>
+
+  </div>
+
+  {{> partials/footer}}
+
+</body>
+</html>

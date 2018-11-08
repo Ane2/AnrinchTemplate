@@ -1,0 +1,19 @@
+title:
+  default: Games
+  en-us: Games
+  pl-pl: Gry
+
+# description:
+#   en: This is my english description
+#   pl: [Polski opis, Od konta]
+
+keywords:
+  en: hey test page cms morph
+  pl: hej testy ciazowe
+
+component: index.js
+
+extension:
+  tracker:
+    enabled: true
+    index per settings: true

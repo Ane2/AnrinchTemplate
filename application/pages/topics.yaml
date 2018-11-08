@@ -1,0 +1,5 @@
+route: /topics/:topic
+template: /topics.html
+extension:
+  tracker:
+    enabled: false

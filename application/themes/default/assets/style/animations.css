@@ -1,0 +1,45 @@
+body.preload {
+  animation-duration: 0s !important;
+  -webkit-animation-duration: 0s !important;
+  transition:background-color 0s, opacity 0s, color 0s, width 0s, height 0s, padding 0s, margin 0s !important;
+}
+
+@-webkit-keyframes fadeIn80to100 {
+  from { opacity: 0.8; }
+  to { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn80to100 {
+  from { opacity: 0.8; }
+  to { opacity: 1; }
+}
+
+@-o-keyframes fadeIn80to100 {
+  from { opacity: 0.8; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeIn80to100 {
+  from { opacity: 0.8; }
+  to { opacity: 1; }
+}
+
+@-webkit-keyframes fadeOut80to100 {
+  from { opacity: 1; }
+  to { opacity: 0.8; }
+}
+
+@-moz-keyframes fadeOut80to100 {
+  from { opacity: 1; }
+  to { opacity: 0.8; }
+}
+
+@-o-keyframes fadeOut80to100 {
+  from { opacity: 1; }
+  to { opacity: 0.8; }
+}
+
+@keyframes fadeOut80to100 {
+  from { opacity: 1; }
+  to { opacity: 0.8; }
+}

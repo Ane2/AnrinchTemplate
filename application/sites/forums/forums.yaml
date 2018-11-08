@@ -1,0 +1,8 @@
+locale:
+  enabled: false
+
+title: 'Anrinch Forums'
+
+extension:
+  tracker:
+    enabled: true

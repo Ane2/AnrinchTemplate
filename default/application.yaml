@@ -1,0 +1,101 @@
+multisite:
+  enabled: false
+  directory: application/sites
+
+admin:
+  enabled: false
+  directory: application/admin
+  access: admin
+  route: /admin
+
+virtualization:
+  instances: 1
+
+http:
+  port: 80
+  host: null
+  debug:
+    port: 8000
+    host: null
+
+https:
+  enabled: false
+  force: true
+  port: 443
+  debug:
+    port: 44300
+    host: null
+  key: null
+  certificate: null
+  # TODO: Add client-key too.
+
+# transporter:
+  # default:
+  #   host: 'smtp.example.com'
+  #   port: 587
+  #   secure: false # true for 465, false for other ports
+  #   auth:
+  #     user: 'user' # generated ethereal user
+  #     pass: 'password' # generated ethereal password
+
+# locale:
+#   enabled: true
+#   default: en_US
+
+# description: 'My site description'
+# title: 'My Title'
+#
+# type: website
+#
+# cluster:
+#   enabled: false
+#   childrens: 12
+#
+# pages:
+#   theme: default
+#   engine: marko
+#   autoreload: true
+#
+# cache:
+#   enabled: true
+#   driver: simple
+#   ttl: 3600
+#
+# assets:
+#   css_minify: true
+#   css_rewrite: true
+#   js_minify: true
+#
+# errors:
+#   path: /default
+#
+# debugger:
+#   errors: true
+#   port: 3001 # For listening to chrome debugger?
+#
+# multipart:
+#   driver: auto
+#   max-upload-size: 3mb
+#   path: /
+
+# multisite:
+#   enabled: true
+#   directory: sites
+#
+# locale:
+#   enabled: true
+
+# access: session
+#
+# admin:
+#   enabled: true
+#   route: /admin
+#   access: admin
+
+# binding:
+#   port: 80
+#   host: null
+
+# ssl:
+#   enabled: true
+#   force: true

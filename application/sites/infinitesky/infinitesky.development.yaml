@@ -1,0 +1,12 @@
+transporter:
+  default:
+    host: 'smtp.gmail.com'
+    port: 587
+    secure: false # true for 465, false for other ports
+    auth:
+      user: 'p.d.walczak@gmail.com' # generated ethereal user
+      pass: 'xderosmorynsxjbj' # generated ethereal password
+
+extension:
+  tracker:
+    I am so key: true

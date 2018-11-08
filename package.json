@@ -1,0 +1,38 @@
+{
+  "name": "namelesscms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aos": "^2.3.3",
+    "bcrypt": "^3.0.0",
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.2",
+    "chokidar": "^2.0.3",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "file-type": "^9.0.0",
+    "front-matter": "^2.3.0",
+    "js-yaml": "^3.11.0",
+    "juice": "^4.3.2",
+    "loadash": "^1.0.0",
+    "makro": "^1.0.5",
+    "marko": "^4.9.7",
+    "multer": "^1.3.1",
+    "mustache": "^2.3.0",
+    "node-sass": "^4.9.4",
+    "nodemailer": "^4.6.8",
+    "optimist": "^0.6.1",
+    "read-chunk": "^3.0.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "sharp": "^0.20.7",
+    "walk": "^2.3.13",
+    "winston": "^3.1.0"
+  }
+}

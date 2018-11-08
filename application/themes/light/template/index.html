@@ -1,0 +1,474 @@
+{{>partials/metadata}}
+
+<body>
+  <div class="stage">
+    {{>partials/header}}
+
+    <div class="overlay"></div>
+
+    <div class="screen">
+      <span class="category"></span>
+      <h1></h1>
+      <a href="/">Learn more</a>
+    </div>
+
+    <button class="action next"><i class="fal fa-angle-right"></i></button>
+    <button class="action previous"><i class="fal fa-angle-left"></i></button>
+
+    <nav class="slider"></nav>
+  </div>
+
+  <script>
+    let stage = $('div.stage')
+    let overlay = stage.find('div.overlay')
+    let screen = stage.find('div.screen')
+
+    let title = screen.find('h1')
+    let read = screen.find('a')
+    let category = screen.find('span.category')
+    let navigation = stage.find('nav.slider')
+
+    let forward = stage.find('button.next')
+    let backward = stage.find('button.previous')
+
+    let current = 0
+
+    let items = [
+      ['INFINITESKY', 'The halloween event at Hanama Palace has started!1', '/application/light/halloween.png'],
+      ['INFINITESKY', 'The halloween event at Hanama Palace has started!2', '/application/light/reaper.png'],
+      ['INFINITESKY', 'The halloween event at Hanama Palace has started!3', '/application/light/halloween.png']
+    ]
+
+    let autoreel
+    let buttons = []
+
+    for (let index in items) {
+      let item = items[index]
+      let button = $('<button><span class="bar"><span></span></span></button>')
+
+      let item_bar = button.find('span.bar span')
+
+      item_bar.frame({
+        width: '0%'
+      })
+
+      item.push(item_bar)
+
+      buttons.push(item_bar)
+
+      button.on('click', () => {
+        current = index
+        clearTimeout(autoreel)
+
+        for (let button of buttons) {
+          button.layer.stop().reset()
+        }
+
+        clearTimeout(autoreel)
+        animate_forward()
+      })
+
+      navigation.append(button)
+    }
+
+    category.frame({
+      opacity: 0,
+      transform: 'translateX(100px)'
+    })
+
+    title.frame({
+      opacity: 0,
+      transform: 'translateX(100px)'
+    })
+
+    read.frame({
+      opacity: 0,
+      transform: 'translateX(100px)'
+    })
+
+    let animating = true
+
+    let animate_forward = () => {
+      let item = items[current++]
+
+      if (!item && items.length) {
+        current = 0
+        return animate_forward()
+      }
+
+      let [item_category, item_title, item_background, item_bar] = item
+
+      category.html(item_category).layer.reset()
+      title.html(item_title).layer.reset()
+      read.layer.reset()
+
+      overlay.css({'background-image': 'url("'+item_background+'")'}).frame({
+        transform: 'translateX(0px)'
+      })
+
+      overlay.layer.play({
+        transform: 'translateX(-50px)',
+        duration: 1000
+      })
+
+      category.layer.play({
+        opacity: 1,
+        duration: 1000,
+        transform: 'translateX(0px)'
+      })
+
+      title.layer.play({
+        opacity: 1,
+        duration: 1000,
+        transform: 'translateX(0px)'
+      })
+
+      read.layer.play({
+        opacity: 1,
+        duration: 1000,
+        transform: 'translateX(0px)',
+        delay: 250
+      })
+
+      if (animating) {
+        item_bar.layer.play({
+          width: '100%',
+          duration: 5000
+        })
+
+        autoreel = setTimeout(() => {
+          item_bar.layer.reset().stop()
+          animate_forward()
+        }, 5000)
+      }
+    }
+
+    navigation.on('mouseenter', () => {
+      animating = false
+
+      clearTimeout(autoreel)
+
+      for (let button of buttons) {
+        button.layer.reset().stop()
+      }
+    })
+
+    navigation.on('mouseleave', () => {
+      animating = true
+
+      let index = current - 1
+
+      if (current - 1 === -1) {
+        index = items.length - 1
+      }
+
+      let item = items[index]
+
+      if (!item) {
+        item = items[0]
+      }
+
+      let item_bar = item[3]
+
+      item_bar.layer.play({
+        width: '100%',
+        duration: 5000
+      })
+
+      autoreel = setTimeout(() => {
+        item_bar.layer.reset().stop()
+        animate_forward()
+      }, 5000)
+    })
+
+    forward.on('click', () => {
+      let item = items[current - 1]
+      let item_bar = item[3]
+
+      item_bar.layer.reset().stop()
+      clearTimeout(autoreel)
+      animate_forward()
+    })
+
+    backward.on('click', () => {
+      let item = items[current - 1]
+      let item_bar = item[3]
+
+      current -= 2
+
+      if (current === -1) {
+        current = items.length - 1
+      }
+
+      item_bar.layer.reset().stop()
+      clearTimeout(autoreel)
+      animate_forward()
+    })
+
+    animate_forward()
+  </script>
+
+  <i class="glyph line"></i>
+
+  <div class="content">
+    <h1 class="w1240">Games</h1>
+
+    <div class="box w1240 games">
+      <a href="#" style="background-image: url(/application/light/infinitesky.png)">
+        <span class="border">
+          <h2>InfiniteSky</h2>
+
+          <span class="type">mmorpg</span>
+        </span>
+      </a>
+
+      <a href="#" style="background-image: url(/application/light/lineofage.png)">
+        <span class="border">
+          <h2>Line of Age</h2>
+
+          <span class="type">mmorpg</span>
+        </span>
+      </a>
+
+      <a href="#" style="background-image: url(/application/light/infinitesky.png)">
+        <span class="border">
+          <h2>Ragnarok</h2>
+
+          <span class="type">mmorpg</span>
+        </span>
+      </a>
+
+      <a href="#" style="background-image: url(/application/light/lineofage.png)">
+        <span class="border">
+          <h2>Mu Online</h2>
+
+          <span class="type">mmorpg</span>
+        </span>
+      </a>
+
+      <a href="#" style="background-image: url(/application/light/infinitesky.png)">
+        <span class="border">
+          <h2>InfiniteSky</h2>
+
+          <span class="type">mmorpg</span>
+        </span>
+      </a>
+
+
+      <a href="#" style="background-image: url(/application/light/lineofage.png)">
+        <span class="border">
+          <h2>InfiniteSky</h2>
+
+          <span class="type">mmorpg</span>
+        </span>
+      </a>
+
+      <a href="#" style="background-image: url(/application/light/infinitesky.png)">
+        <span class="border">
+          <h2>InfiniteSky</h2>
+
+          <span class="type">mmorpg</span>
+        </span>
+      </a>
+
+      <a href="#" style="background-image: url(/application/light/lineofage.png)">
+        <span class="border">
+          <h2>Line of Age</h2>
+
+          <span class="type">mmorpg</span>
+        </span>
+      </a>
+
+      <a href="#" style="background-image: url(/application/light/infinitesky.png)">
+        <span class="border">
+          <h2>Ragnarok</h2>
+
+          <span class="type">mmorpg</span>
+        </span>
+      </a>
+
+      <a href="#" style="background-image: url(/application/light/lineofage.png)">
+        <span class="border">
+          <h2>Mu Online</h2>
+
+          <span class="type">mmorpg</span>
+        </span>
+      </a>
+
+    </div>
+
+    <div class="box stories-updates">
+
+      <div class="w1240 box">
+        <div class="box news">
+
+          <h1>Latest</h1>
+
+          <a href="#" class="highlighted" style="background-image: url(https://static1.srcdn.com/wordpress/wp-content/uploads/2018/08/Metal-Gear-Solid-Concept-Art.jpg)">
+            <span class="border"></span>
+
+            <div class="gradient" data-swatch="#484c4f">
+              <h1>Adding a way to develop new environemnts and worlds</h1>
+              <span class="category">INFINITESKY</span>
+            </div>
+          </a>
+
+          <h1>Stories</h1>
+
+          <a href="#" style="background-image: url(/1482872934-1464199131.jpg)">
+
+            <span class="border"></span>
+
+            <div class="gradient" data-swatch="#686f68">
+              <h1>New server source code open for hostings</h1>
+              <span class="category">INFINITESKY</span>
+            </div>
+          </a>
+
+          <a href="#" style="background-image: url('/lineage-ii-hd-wallpapers-33313-3854270.jpg')">
+
+            <span class="border"></span>
+
+            <div class="gradient" data-swatch="#3f628c">
+              <h1>To what we are cappable of</h1>
+              <span class="category">INFINITESKY</span>
+            </div>
+          </a>
+
+          <a href="#" style="background-image: url(/fog-trees-way-viewes-morning.jpg)">
+
+            <span class="border"></span>
+
+            <div class="gradient" data-swatch="#8a8a50">
+              <h1>Obligations & Limitations</h1>
+              <span class="category">INFINITESKY</span>
+            </div>
+          </a>
+
+          <a href="#" style="background-image: url(/romantic-dinner-west-beaches-sun.jpg)">
+
+            <span class="border"></span>
+
+            <div class="gradient" data-swatch="#ba4909">
+              <h1>The new year eve</h1>
+              <span class="category">INFINITESKY</span>
+            </div>
+          </a>
+
+          <a href="#" style="background-image: url(https://static1.srcdn.com/wordpress/wp-content/uploads/2018/08/Metal-Gear-Solid-Concept-Art.jpg)">
+
+            <span class="border"></span>
+
+            <div class="gradient" data-swatch="#484c4f">
+              <h1>The Halloween event pushed to the limit</h1>
+              <span class="category">INFINITESKY</span>
+            </div>
+          </a>
+
+          <a href="#" style="background-image: url(/white-wallpaper10.jpg)">
+
+            <span class="border"></span>
+
+            <div class="gradient" data-swatch="#969696">
+              <h1>The caricature of developers</h1>
+              <span class="category">INFINITESKY</span>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="box column upcoming">
+          <h1>Upcoming</h1>
+
+          <div class="box column border">
+
+            <a href="#">
+              <span class="date">
+                <span class="from">18 Sep</span>
+              </span>
+
+              <h1>The awaking of new server arrival</h1>
+            </a>
+
+            <a href="#">
+              <span class="date">
+                <span class="from">18 Sep</span>
+                <span class="to">28 Sep</span>
+              </span>
+
+              <h1>The awaking of new server arrival</h1>
+            </a>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+      const pSBC = function (p, from, to) {
+        if(typeof(p)!="number"||p<-1||p>1||typeof(from)!="string"||(from[0]!='r'&&from[0]!='#')||(to&&typeof(to)!="string"))return null; //ErrorCheck
+        if(!this.pSBCr)this.pSBCr=(d)=>{
+          let l=d.length,RGB={};
+          if(l>9){
+            d=d.split(",");
+            if(d.length<3||d.length>4)return null;//ErrorCheck
+            RGB[0]=i(d[0].split("(")[1]),RGB[1]=i(d[1]),RGB[2]=i(d[2]),RGB[3]=d[3]?parseFloat(d[3]):-1;
+          }else{
+            if(l==8||l==6||l<4)return null; //ErrorCheck
+            if(l<6)d="#"+d[1]+d[1]+d[2]+d[2]+d[3]+d[3]+(l>4?d[4]+""+d[4]:""); //3 or 4 digit
+            d=i(d.slice(1),16),RGB[0]=d>>16&255,RGB[1]=d>>8&255,RGB[2]=d&255,RGB[3]=-1;
+            if(l==9||l==5)RGB[3]=r((RGB[2]/255)*10000)/10000,RGB[2]=RGB[1],RGB[1]=RGB[0],RGB[0]=d>>24&255;
+          }
+          return RGB;}
+        var i=parseInt,r=Math.round,h=from.length>9,h=typeof(to)=="string"?to.length>9?true:to=="c"?!h:false:h,b=p<0,p=b?p*-1:p,to=to&&to!="c"?to:b?"#000000":"#FFFFFF",f=this.pSBCr(from),t=this.pSBCr(to);
+        if(!f||!t)return null; //ErrorCheck
+        if(h)return "rgb"+(f[3]>-1||t[3]>-1?"a(":"(")+r((t[0]-f[0])*p+f[0])+","+r((t[1]-f[1])*p+f[1])+","+r((t[2]-f[2])*p+f[2])+(f[3]<0&&t[3]<0?")":","+(f[3]>-1&&t[3]>-1?r(((t[3]-f[3])*p+f[3])*10000)/10000:t[3]<0?f[3]:t[3])+")");
+        else return "#"+(0x100000000+r((t[0]-f[0])*p+f[0])*0x1000000+r((t[1]-f[1])*p+f[1])*0x10000+r((t[2]-f[2])*p+f[2])*0x100+(f[3]>-1&&t[3]>-1?r(((t[3]-f[3])*p+f[3])*255):t[3]>-1?r(t[3]*255):f[3]>-1?r(f[3]*255):255)).toString(16).slice(1,f[3]>-1||t[3]>-1?undefined:-2);
+      }
+
+      let news = $('div.news a')
+
+      news.each((index, n) => {
+        let gradient = $(n).find('div.gradient')
+
+        gradient.css({
+          'background-image': 'linear-gradient(0, ' + pSBC(-0.4, gradient.attr('data-swatch')) + ', rgba(0,0,0,0))'
+        })
+      })
+
+      var img = document.createElement('img');
+      img.setAttribute('src', '/white-wallpaper10.jpg')
+
+      img.addEventListener('load', function() {
+          var vibrant = new Vibrant(img)
+          var swatches = vibrant.swatches()
+          for (var swatch in swatches)
+              if (swatches.hasOwnProperty(swatch) && swatches[swatch])
+                  console.log(swatch, swatches[swatch].getHex())
+
+          /*
+           * Results into:
+           * Vibrant #7a4426
+           * Muted #7b9eae
+           * DarkVibrant #348945
+           * DarkMuted #141414
+           * LightVibrant #f3ccb4
+           */
+      });
+    </script>
+
+
+    <!-- <div class="box column encourage">
+      <div class="box column w1240">
+        <h1>We create worlds day and night. Invite your friends today and have fun in games long time forgotten.</h1>
+
+        <a href="">Invite a friend</a>
+      </div>
+    </div> -->
+
+  </div>
+
+  {{>partials/footer}}
+</body>
+</html>

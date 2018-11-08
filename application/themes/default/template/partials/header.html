@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="{{ locale.name }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+  <link rel="stylesheet" href="/aos.css">
+  <script src="/aos.js"></script>
+
+  <link href="/application/default/style/fontawesome-all.min.css" type="text/css" rel="stylesheet">
+  <link href="/application/default/style/main.css" type="text/css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Open+Sans:300,400" rel="stylesheet">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
+
+  <title>{{ meta.title }}</title>
+
+  <meta name="description" content="{{ meta.description }}" />
+
+  <link rel="alternate" href="{{ self.protocol }}://{{ self.hostname }}{{ self.fullpath }}" hreflang="{{ locale.name }}" />
+  <link rel="alternate" href="{{ self.protocol }}://{{ self.hostname }}{{ self.fullpath }}" hreflang="x-default" />
+
+  <link rel="canonical" href="{{ self.protocol }}://{{ self.hostname }}{{ self.fullpath }}" />
+
+  <meta property="og:locale" content="{{ locale.tag }}" />
+  <meta property="og:type" content="{{ page.type }}" />
+  <meta property="og:title" content="{{ meta.title }}" />
+  <meta property="og:description" content="{{ meta.description }}; {{ meta.sitename }}" />
+  <meta property="og:url" content="{{ self.protocol }}://{{ self.hostname }}{{ self.fullpath }}" />
+  <meta property="og:site_name" content="{{ meta.sitename }}" />
+
+  {{ #meta.tags }}
+  <{{& tag }} {{& attributes}} />
+  {{ /meta.tags }}
+</head>

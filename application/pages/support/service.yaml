@@ -1,0 +1,4 @@
+route: /support/:game
+title:
+  en-us: Services
+  pl-pl: [Serwisy, $parent]

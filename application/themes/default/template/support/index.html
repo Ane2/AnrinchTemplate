@@ -1,0 +1,133 @@
+{{> partials/header}}
+
+<body>
+  {{> partials/navigation}}
+
+  <script>
+    window.onload = () => {
+      let search = document.getElementById('trouble-search')
+
+      search.onkeypress = (event) => {
+        if (event.keyCode === 13) return event.preventDefault()
+      }
+
+      let delay = null
+      let query = () => {
+        let input = search.value
+
+        console.log(input)
+      }
+
+      search.onkeyup = () => {
+        clearTimeout(delay)
+        delay = setTimeout(query, 100)
+      }
+    }
+  </script>
+
+  <div class="content">
+    <div class="bg">
+      <h1 class="w1340 cell support-title">Find needed help</h1>
+
+      <div class="support-find cell">
+        <form action="/support" method="POST">
+          <input type="text" placeholder="What trouble You?" class="support-input" id="trouble-search" name="query">
+        </form>
+        <i class="far fa-search"></i>
+      </div>
+    </div>
+
+    <div class="w1340 grid support-fields">
+      <div class="grid product-selector">
+
+        <a href="/support/infinitesky">
+          <!-- <img src="/application/default/gamecard.png" alt=""> -->
+          <h3>InfiniteSky</h3>
+        </a>
+
+        <a href="/support/account-and-application">
+          <!-- <img src="http://support.anrinch.com/themes/default/img/game/icon/infinitesky.png" alt=""> -->
+          <h3>Account & App</h3>
+        </a>
+
+        <a href="/support/account-and-application">
+          <!-- <img src="http://support.anrinch.com/themes/default/img/game/icon/infinitesky.png" alt=""> -->
+          <h3>Account & App</h3>
+        </a>
+
+        <a href="/support/account-and-application">
+          <!-- <img src="http://support.anrinch.com/themes/default/img/game/icon/infinitesky.png" alt=""> -->
+          <h3>Account & App</h3>
+        </a>
+
+        <a href="/support/account-and-application">
+          <!-- <img src="http://support.anrinch.com/themes/default/img/game/icon/infinitesky.png" alt=""> -->
+          <h3>Account & App</h3>
+        </a>
+
+        <a href="/support/account-and-application">
+          <!-- <img src="http://support.anrinch.com/themes/default/img/game/icon/infinitesky.png" alt=""> -->
+          <h3>Account & App</h3>
+        </a>
+
+        <a href="/support/account-and-application">
+          <!-- <img src="http://support.anrinch.com/themes/default/img/game/icon/infinitesky.png" alt=""> -->
+          <h3>Account & App</h3>
+        </a>
+
+        <a href="/support/account-and-application">
+          <!-- <img src="http://support.anrinch.com/themes/default/img/game/icon/infinitesky.png" alt=""> -->
+          <h3>Account & App</h3>
+        </a>
+
+      </div>
+
+      <div class="recent-activity support-field activity">
+        <div class="container">
+          <h2><i class="fas fa-user"></i>My Recent Activity</h2>
+
+          <ul>
+            <li>
+              <a href="" class="grid">
+                <span class="title">Cannot log back into launcher!</span>
+                <span class="description">Created 15m ago</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="" class="grid">
+                <span class="title">Cannot log back into launcher! Cannot log back into launcher! Cannot log back into launcher!</span>
+                <span class="description">Created 15m ago</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="" class="grid">
+                <span class="title">Cannot log back into launcher!</span>
+                <span class="description">Created 15m ago</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="grid support-special">
+      <div class="w1200 grid">
+        <div class="info cell">
+          <h1>Could not find what you was looking for?</h1>
+
+          <p>Ask us <u>anything</u> with our Support Ticket!</p>
+        </div>
+
+        <a href="#">Create a ticket</a>
+      </div>
+    </div>
+
+  </div>
+
+  {{> partials/footer}}
+
+</body>
+</html>
