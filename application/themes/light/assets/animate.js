@@ -38,11 +38,9 @@
     window.requestAnimationFrame(animate)
   }
 
-  Queue.timestamp = new Date()
+  Queue.timestamp = null
 
-  let timeperframe = 1000 / 60
-
-  let animate = () => {
+  let animate = (time) => {
     if (!Queue.list.length || Queue.force_pause) return Queue.paused = true
 
     let timestamp = new Date()
@@ -53,17 +51,14 @@
     }
 
     let step = timestamp.getTime() - Queue.timestamp.getTime()
+
     Queue.timestamp = timestamp
 
     for (let layer of Queue.list) {
       layer.animate(step)
     }
 
-    let tick = new Date().getTime() - timestamp.getTime()
-
-    setTimeout(() => {
-      window.requestAnimationFrame(animate)
-    }, timeperframe - tick)
+    window.requestAnimationFrame(animate)
   }
 
   class Assembler {
